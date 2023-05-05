@@ -1,0 +1,5 @@
+This code defines a Java class called RecentlyPlayedStore that represents an in-memory store for recently played songs. The store can accommodate a fixed number of songs per user, which is determined by the capacity variable set during object creation.
+
+The store is implemented as a Map<String, LinkedList<String>> object, where each key is a user and the corresponding value is a linked list of songs played by that user. The addSong method is used to add a new song to the store for a given user. If the user is not present in the map, a new entry is added with an empty linked list of songs. If the song is already present in the list, it is removed and added back to the end of the list to reflect the most recent play. If the list is already at capacity, the least recently played song is removed from the beginning of the list.
+
+The getRecentlyPlayedSongs method is used to retrieve the list of recently played songs for a given user. It simply returns the linked list associated with the given user in the userSongMap
